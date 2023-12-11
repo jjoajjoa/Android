@@ -18,6 +18,7 @@ public class MainActivity2 extends AppCompatActivity {
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.main, menu);
         return super.onCreateOptionsMenu(menu);
+
     }
 
     @Override
@@ -30,6 +31,8 @@ public class MainActivity2 extends AppCompatActivity {
             Toast.makeText(MainActivity2.this, "우동동동", Toast.LENGTH_SHORT).show();
         } else if (item.getItemId() == R.id.mandoo) {
             Toast.makeText(MainActivity2.this, "만뚜룹뚜룹뚜", Toast.LENGTH_SHORT).show();
+        } else if (item.getItemId() == android.R.id.home) {
+            finish();
         }
         return super.onOptionsItemSelected(item);
     }
@@ -40,6 +43,9 @@ public class MainActivity2 extends AppCompatActivity {
         setContentView(R.layout.activity_main2);
 
         getSupportActionBar().setTitle("클릭 연습!");
+
+        getSupportActionBar().setTitle("연습2");
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         txtCount = findViewById(R.id.count);
         txtFruit = findViewById(R.id.fruit);

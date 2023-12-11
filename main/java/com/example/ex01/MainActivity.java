@@ -1,8 +1,10 @@
 package com.example.ex01;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.LinearLayout;
@@ -17,6 +19,8 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.sub02);
+        getSupportActionBar().setTitle("연습1");
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
     }
 
     public void onClick(View view) {
@@ -33,5 +37,13 @@ public class MainActivity extends AppCompatActivity {
             toast.setView(linear);
             toast.show();
         }
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+        if(item.getItemId() == android.R.id.home) {
+            finish();
+        }
+        return super.onOptionsItemSelected(item);
     }
 }
