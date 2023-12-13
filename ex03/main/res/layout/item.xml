@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="10sp">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/photo"
+        android:layout_width="55sp"
+        android:layout_height="55sp"
+        android:src="@drawable/baseline_face_retouching_natural_24" />
+
+    <TextView
+        android:id="@+id/name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10sp"
+        android:layout_toRightOf="@id/photo"
+        android:text="name"
+        android:textSize="15sp" />
+
+    <TextView
+        android:id="@+id/phone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/name"
+        android:layout_marginLeft="10sp"
+        android:layout_toRightOf="@id/photo"
+        android:text="phone"
+        android:textSize="15sp" />
+
+    <TextView
+        android:id="@+id/juso"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/phone"
+        android:layout_marginLeft="10sp"
+        android:layout_toRightOf="@id/photo"
+        android:text="address"
+        android:textSize="15sp" />
+
+    <ImageView
+        android:id="@+id/btnDelete"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:src="@drawable/baseline_delete_24" />
+
+</RelativeLayout>
